@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Snowboards</div>
+            <div class="toggle" id="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="cart.html">Collection</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="main">
+            
+        </section>
+    </main>
+
+    <script >
+        // Select the toggle and navLinks
+const toggle = document.getElementById('toggle');
+const navLinks = document.getElementById('navLinks');
+
+// Toggle navbar visibility
+toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Animation for toggle bars
+    toggle.classList.toggle('active');
+});
+
+// Toggle animation for the bars
+toggle.addEventListener('click', () => {
+    toggle.querySelectorAll('span')[0].classList.toggle('rotate-down');
+    toggle.querySelectorAll('span')[1].classList.toggle('hide');
+    toggle.querySelectorAll('span')[2].classList.toggle('rotate-up');
+});
+
+
+    </script>
+</body>
+</html>
